@@ -14,4 +14,9 @@ bot = telebot.TeleBot(token=bot_token, num_threads=8)
 def start(message):
     bot.reply_to(message, 'Halo')
     
+@bot.message_handler(commands=['track'])
+def start(message):
+    r = request.get("https://covid19.mathdro.id/api/countries")
+    
+    
 bot.polling(none_stop=True, interval=2, timeout=90)
