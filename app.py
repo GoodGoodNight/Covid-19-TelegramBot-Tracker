@@ -21,6 +21,8 @@ def start(message):
     r = requests.get("https://covid19.mathdro.id/api/countries")
     loads = json.loads(r)
     
-
+@bot.message_handler(commands=['about'])
+def start(message):
+    bot.send_message(message.chat.id,"")
 
 bot.polling(none_stop=True, interval=2, timeout=90)
