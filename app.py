@@ -21,8 +21,15 @@ def start(message):
     r = requests.get("https://covid19.mathdro.id/api/countries")
     loads = json.loads(r)
     
-@bot.message_handler(commands=['about'])
+@bot.message_handler(commands=['about_us'])
 def start(message):
+    messages_text = """
+This bot created to help people to track covid-19 in their country,
+We hope this bot could help people to stay safe.
+
+We're making more feature as soon as possible.
+    
+    """
     bot.send_message(message.chat.id,"")
 
 bot.polling(none_stop=True, interval=2, timeout=90)
