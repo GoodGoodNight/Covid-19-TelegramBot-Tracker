@@ -24,10 +24,15 @@ def start(message):
 @bot.message_handler(commands=['about_us'])
 def start(message):
     messages_text = """
-This bot created to help people to track covid-19 in their country,
-We hope this bot could help people to stay safe.
+This bot created to help people to track covid-19 in their countries,
+We hope this bot could help people to stay safe and healthy.
 
 We're making more feature as soon as possible.
+
+
+
+
+
     
     """
     bot.send_message(message.chat.id,"")
