@@ -10,7 +10,7 @@ import logging
 bot_token = ''
 bot = telebot.TeleBot(token=bot_token, num_threads=8)
 
-
+# 111
 @bot.message_handler(commands=['start'])
 def start(message):
     bot.reply_to(message, 'Halo')
