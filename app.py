@@ -10,13 +10,17 @@ import logging
 bot_token = ''
 bot = telebot.TeleBot(token=bot_token, num_threads=8)
 
+
 @bot.message_handler(commands=['start'])
 def start(message):
     bot.reply_to(message, 'Halo')
-    
+
+
 @bot.message_handler(commands=['track'])
 def start(message):
-    r = request.get("https://covid19.mathdro.id/api/countries")
+    r = requests.get("https://covid19.mathdro.id/api/countries")
+    loads = json.loads(r)
     
-    
+
+
 bot.polling(none_stop=True, interval=2, timeout=90)
